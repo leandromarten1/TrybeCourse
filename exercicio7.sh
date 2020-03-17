@@ -2,7 +2,7 @@
 
 # Exercício 7
 
-# caminho=$1
+caminho=$1
 
         if [ -f "$caminho" ]
             then                  
