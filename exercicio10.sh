@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# E também vou ter muito sucesso na programação!
 
 # Exercicio 10        
 
