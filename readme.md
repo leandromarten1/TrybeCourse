@@ -1,16 +1,18 @@
 # Exercises for training shell scripts.
 
+## Exercise 1
+ Print "Shell Script is cool!".
+
+## Exercise 2
+Sets a string into a variable and prints it from the screen.
+
+## Exercise 3
+Save the result of the 'hostname' command in a variable and print it on the screen with a message.
+
+## Exercise 4
 
 
-Exercícios para treinar scripts no shell.
 
-O que faz cada exercicio?
-
-#1 - Escreve na tela "Shell Script é demais!".
-
-#2 - Seta uma string em uma variável e a imprime da tela.
-
-#3 - Guarda em uma variavel o resultado do comando 'hostname' e imprime na tela acompanhado de uma mensagem.
 
 #4 - Verifica se um caminho existe e printa na tela com as informações se esta habilitado ou não.
 
