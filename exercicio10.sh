@@ -1,5 +1,6 @@
 #!/bin/bash
-# Eu sou Tryber e ... Estou aprendendo github
+# Eu sou Tryber E também vou ter muito sucesso na programação!
+
 
 # Exercicio 10        
 
