@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Exercício 2
+# Exercise 2
 
-    FRASE="Shell Script é demais!"
-    echo $FRASE
+    phrase="Shell Script is cool!"
+    echo $phrase

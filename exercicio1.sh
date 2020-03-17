@@ -1,5 +1,6 @@
 #!/bin/bash
 
-# Primeiro Exercício
-    echo "Shell Script é demais!"
+# First Exercise
+
+    echo "Shell Script is cool!"
 
