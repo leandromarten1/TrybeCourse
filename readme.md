@@ -1,3 +1,5 @@
+Exercises for training shell scripts
+
 Exercícios para treinar scripts no shell.
 
 O que faz cada exercicio?
