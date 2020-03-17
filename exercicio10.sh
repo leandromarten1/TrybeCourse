@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# Eu sou Tryber e ... Estou aprendendo github
 
 # Exercicio 10        
 
