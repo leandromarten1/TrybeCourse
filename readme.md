@@ -1,4 +1,6 @@
-Exercises for training shell scripts
+# Exercises for training shell scripts.
+
+
 
 Exercícios para treinar scripts no shell.
 
