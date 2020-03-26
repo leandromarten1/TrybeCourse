@@ -4,16 +4,16 @@
 let angleOne = 40;
 let angleTwo = 60;
 let angleThree = 80;
-let angle = false;
+let isTriangle = false;
 
 // Sum Angles
 let sumAngle = angleOne + angleTwo + angleThree;
 
 // Comparing  
 if (sumAngle == 180){
-    angle = true;
-    console.log(angle);
+    isTriangle = true;
+    console.log(isTriangle);
 }
 else{
-    console.log(angle);
+    console.log(isTriangle);
 }
