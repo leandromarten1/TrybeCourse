@@ -1,6 +1,6 @@
 
 
-let salary = 4000;
+let salary = 3000;
 let inssTax = null;
 let irTax = null;
 let liquidSalary = null;
@@ -20,6 +20,17 @@ if (salary <= 1556.94) {
 salary -= inssTax;
 
 // Calculate IR tax
-if (salary > 4664.68){
+if (salary >= 4664.68){
+    irTax = (salary * 0.275) + 869,36;
+}else if(salary>= 3751.06){
+    irTax = (salary * 0.225) + 636.13;
+}else if(salary >= 2826.66){
+    irTax = (salary * 0.15) + 354.80;
+}else if(salary >= 1903.99){
+    irTax = (salary * 0.075) - 142.80;
+}else irTax = 0;
 
-}
+// Salary - irTax
+salary -= irTax;
+
+console.log("Salary is: "+salary);
