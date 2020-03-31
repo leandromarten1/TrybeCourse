@@ -39,13 +39,42 @@
       </div>
     </div>
     <script>
+
       function changeDescription(text){
         document.getElementsByTagName('p')[1].innerHTML = text;
       }
-      function changeColor(){
-      }
 
-      changeDescription("Quero trabalhar fora do Brasil");
+      function changecolor(element, color){
+            document.getElementsByClassName(element)[0].style.backgroundColor = color;
+        }
+
+        function correctText(element, string){
+            document.getElementsByClassName(element)[0].innerHTML = string;
+        }
+
+        function toUpper(tag){
+            let str = document.getElementsByTagName(tag);
+            for(let i = 0 ; i < str.length; i++){
+                str[i].innerText = str[i].innerText.toUpperCase();
+            }
+        }
+
+        function printContent(tag){
+            let str = document.getElementsByTagName(tag);
+            for(let i = 0 ; i < str.length; i++){
+                console.log(str[i].innerHTML)
+            }
+        }
+
+
+        changeDescription("Quero trabalhar fora do Brasil");
+        changecolor("main-content", "#0fa36b")
+        changecolor("center-content", "white")
+        correctText("title", "JavaScript" )
+        toUpper("p")
+        printContent("p")
+
+      
         /*
         Aqui você vai modificar os elementos já existentes utilizando apenas as funções:
         - document.getElementById()
