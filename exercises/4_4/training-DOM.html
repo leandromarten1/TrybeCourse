@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class="info">Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class="info">Segundo parágrafo!</p>
+
+    <script> 
+
+let paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+
+      // Exercise 1
+      let title = "Fome de Poder!";
+      document.getElementById("page-title").innerHTML = title;
+
+      // Exercise 2
+      let secondParagraph = document.getElementById("second-paragraph");
+      secondParagraph.style.color = "green";
+      document.getElementById("second-paragraph").innerHTML = "Minha cor favorita é o verde!";
+
+      // Exercise 3
+      document.getElementById('subtitle').innerHTML = document.getElementById('second-paragraph').innerHTML;
+
+      // Exercise 1 - 4 - parte 2 
+      //  console.log(
+      //   document.getElementsByClassName('info')          
+      //  );
+      //  console.log(
+      //   document.getElementsByClassName('info')[0].innerHTML = "Alterado com Sucesso!"
+      //  );
+      //  console.log(
+      //   document.getElementsByTagName('h4')
+      //  );
+      //  console.log(
+      //   document.getElementsByTagName('h4')[0].innerHTML = "Recuperado e Alterado!"
+      //  );
+
+       // Exercise querySelector querySelectioAll
+       // Trocados pelo de cima.
+       console.log(
+        document.getElementsByClassName('info')          
+       );
+       console.log(
+        document.querySelectorAll('.info')[0].innerHTML = "Alterado com Sucesso!"
+       );
+       console.log(
+        document.querySelector('#subtitle').innerHTML = "Novo Subtitulo da página"
+       );
+    </script>
+  </body>
+</html>
