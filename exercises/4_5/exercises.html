@@ -59,7 +59,6 @@
       // COLOQUE SEU CÓDIGO AQUI
 
       //Exercise 1
-
       let title = document.createElement('h1');
       title.innerHTML = "Exercício 4.5 - JavaScript DOM";
       document.querySelector('body').appendChild(title);
@@ -94,6 +93,18 @@
       image.src = "https://picsum.photos/200";
       image.className = "small-image";
       thirdDiv.appendChild(image);
+
+      //Exercise 8
+      let noOrder = document.createElement('ul');
+      document.querySelector('.right-content').appendChild(noOrder);
+      let numeros = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for(index in numeros){
+        let list = document.createElement('li');
+        let cadaNumero = numeros[index];        
+        list.innerHTML = cadaNumero;
+        document.querySelector('.right-content').firstChild.appendChild(list);
+      }
+      
 
 
     </script>
