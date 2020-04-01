@@ -65,9 +65,14 @@
       document.querySelector('body').appendChild(title);
 
       //Exercise 2
-      let newDiv = document.createElement('div');
-      newDiv.className = "main-content";
-      title.appendChild(newDiv);
+      let firstDiv = document.createElement('div');
+      firstDiv.className = "main-content";
+      title.appendChild(firstDiv);
+
+      //Exercise 3
+      let secondDiv = document.createElement('div');
+      secondDiv.className = "center-content";
+      firstDiv.appendChild(secondDiv);
 
     </script>
   </body>
