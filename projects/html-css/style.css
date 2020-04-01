@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: silver;
+  height: 100%;
+  font-family: Impact, sans-serif;
+}
+
+main {
+  padding-top: 100px;
+}
+
+#cabecalho {
+  background-color: dimgray;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 10px 0 0;
+}
+
+.articles h1 {
+  margin-bottom: 15px;
+}
+
+#cabecalho h1 {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: gray;
+}
+
+.nav li {
+  float: left;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  background-color: black;
+}
+
+.lado-esquerdo {
+  width: 65%;
+  float: left;
+  padding: 15px;
+  background-color: silver;
+  margin-bottom: 15px;
+}
+
+.list {
+  margin: 15px;
+}
+
+.articles {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.articles p {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.articles header {
+  border-bottom: 1px dashed black;
+  margin-bottom: 15px;
+}
+
+.articles footer {
+  border-top: 1px dashed black;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.author {
+  font-style: italic;
+  color: black;
+}
+
+table tr , td {
+  border: 1px solid black;
+}
+
+table td {
+  padding: 3px;
+}
+
+.lado-direito {
+  width: 30%;
+  float: right;
+  background-color: silver;
+  padding: 10px;
+}
+
+.blocks {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+#rodape {
+  background-color: dimgray;
+  padding: 30px;
+  max-width: 100%;
+  clear: both;
+  text-align: center;
+}
