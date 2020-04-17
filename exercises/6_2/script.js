@@ -1,3 +1,9 @@
+document.addEventListener('DOMContentLoaded', function() {
+  let elems = document.querySelectorAll('select');
+  let options = document.querySelectorAll('option');
+  let instances = M.FormSelect.init(elems, options);
+});
+
 function states(){
   let estadosBr = ["AC", "AL", "AM", "AP", "BA", "CE", "DF", "ES", "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR", "PE", "PI", "RJ", "RN", "RO", "RS", "RR", "SC", "SE", "SP", "TO"]
   let estados = document.querySelector('#festado');
@@ -10,7 +16,6 @@ function states(){
     //console.log('arô');
   }
 }
-
 function validaForm(){
   if (fname.value == null || fname.value == ""){
     alert('Preencha o campo Nome');
@@ -58,6 +63,7 @@ function validaForm(){
     fdesc.focus();
     return false;
   }
+  //
   let data = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
   if (fdata.value == ""){
     alert('Preencha uma data!');
@@ -70,11 +76,9 @@ function validaForm(){
   }
 }
 
-function showResults(){
-  
+function showResults(){  
   let content = document.createElement('div');
-  let allInputs = document.querySelectorAll('.forjs'); 
-  
+  let allInputs = document.querySelectorAll('.forjs');   
   for(let i = 0; i < allInputs.length; i += 1){
     let field = document.createElement('h3');
     let result = document.createElement('p');
@@ -86,15 +90,13 @@ function showResults(){
   document.body.appendChild(content); 
 }
 
-window.onload = function (){
-  
-  states();
-  const btn = document.querySelector('#btn-form');
-  btn.addEventListener('click', function(e){
-    e.preventDefault();
-    validaForm();
-    showResults();
-  });
-  
-}
-// Precisa validar apenas 1 RADIO BUTTONS
+// validar data
+let picker = new Pikaday({ field: document.getElementById('datepicker') });
+
+states();
+const btn = document.querySelector('#btn-form');
+btn.addEventListener('click', function(e){
+  e.preventDefault();
+  validaForm();
+  showResults();
+});
