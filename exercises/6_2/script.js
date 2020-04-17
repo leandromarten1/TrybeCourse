@@ -30,25 +30,30 @@ function validaForm(){
 function showResults(){  
   let content = document.createElement('div');
   let allInputs = document.querySelectorAll('.forjs');   
+
   for(let i = 0; i < allInputs.length; i += 1){
     let field = document.createElement('h6');
     let result = document.createElement('span');
     result.classList = "blue-text";
-    if(allInputs[i].checked){
-      field.innerHTML = "23";
-      result.innerHTML = allInputs[i].value;
-      content.appendChild(field);
-      content.appendChild(result); 
-     // console.log('entrou no if');
-    }else if(!allInputs[i].checked){
-      field.innerHTML = allInputs[i].name;
-      result.innerHTML = allInputs[i].value;
-      content.appendChild(field);
-      content.appendChild(result); 
-    }   
-    // content.appendChild(field);
-    // content.appendChild(result);    
-	}
+
+    // if(allInputs[i].checked){
+    //   field.innerHTML = allInputs[i].name;
+    //   result.innerHTML = allInputs[i].value;
+    //   content.appendChild(field);
+    //   content.appendChild(result);     
+    // }else{
+    //   field.innerHTML = allInputs[i].name;
+    //   result.innerHTML = allInputs[i].value;
+    //   content.appendChild(field);
+    //   content.appendChild(result); 
+    // }
+      
+
+    field.innerHTML = allInputs[i].name;
+    result.innerHTML = allInputs[i].value;
+    content.appendChild(field);
+    content.appendChild(result);   
+  }
  
   document.body.appendChild(content);
 }
