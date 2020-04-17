@@ -34,12 +34,19 @@ function showResults(){
     let field = document.createElement('h6');
     let result = document.createElement('span');
     result.classList = "blue-text";
+    if(allInputs[i].type === "radio"){
+      if(document.querySelector('#radiocasa').checked){
+        field.innerHTML = 'tipo';
+        result.innerHTML = 'Casa';
+      }
+    } else {
     field.innerHTML = allInputs[i].name;
     result.innerHTML = allInputs[i].value;
     content.appendChild(field);
     content.appendChild(result);    
+	}
   }
-  document.body.appendChild(content); 
+  document.body.appendChild(content);
 }
 
 // validar data
@@ -50,6 +57,6 @@ states();
 const btn = document.querySelector('#btn-form');
 btn.addEventListener('click', function(e){
   e.preventDefault();
-  validaForm(); 
+  //validaForm(); 
   showResults();
 });
