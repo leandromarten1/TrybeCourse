@@ -1,0 +1,56 @@
+
+html {
+margin: 0;
+padding: 0;
+} 
+
+body {
+background-color: darkolivegreen;
+}
+
+#first-card {
+margin-bottom: 100px;
+display: flex;
+}
+#baralho:hover {
+  cursor: pointer;
+}
+
+.row{
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 100%;
+}
+.verso-carta {
+background-image: url('cartas/verso-da-carta.png');
+height: 573px;
+width: 412px;
+}
+.carta {
+background: moccasin;
+border: 1px solid black;
+height: 298px;
+width: 218px;
+}
+.cinco-ouros {
+background-image: url('cartas/cinco-de-ouros.png');
+}
+.nove-espadas {
+background-image: url('cartas/nove-de-espadas.png');
+}
+.quatro-paus {
+background-image: url('cartas/quatro-de-paus.png');
+}
+.seis-copas {
+background-image: url('cartas/seis-de-copas.png');
+}
+.sete-espadas {
+background-image: url('cartas/sete-de-espadas.png');
+}
+.sete-paus {
+background-image: url('cartas/sete-de-paus.png');
+}
+.tres-ouros {
+background-image: url('cartas/tres-de-ouros.png');
+}
