@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Exercises Front End - Forms</title>
+</head>
+<body>
+  <header>
+    <h1>Exercise - Make a Form</h1>
+  </header>
+  <section>
+    <p>* Create a form as requested in: <a href="https://course.betrybe.com/front-end/html-forms/" target="_blank">Trybe Course</a></p>
+  </section>
+  <section>
+    <form name="exercise6-1">
+      <fieldset class="campo">
+        <legend>Dados Pessoais</legend>
+        <p>
+          <label for="fname">Nome: </label>
+          <input class="forjs" id="fname" name="nome" type="text" required="required" maxlength="40">
+        </p>
+        <p>
+          <label for="femail">E-mail: </label>
+          <input class="forjs" id="femail" name="email" type="text" required="required" maxlength="50">
+        </p>
+        <p>
+          <label for="fcpf">CPF: </label>
+          <input class="forjs" id="fcpf" name="cpf" type="text" maxlength="11" required="required">
+        </p>
+        <p>
+          <label for="fend">Endereço: </label>
+          <input class="forjs" id="fend" name="endereco" type="text" maxlength="200" required="required">
+        </p>
+        <p>
+          <label for="fcidade">Cidade: </label>
+          <input class="forjs" id="fcidade" type="text" name="cidade" maxlength="28" required="required">
+        </p>
+        <p>
+          <label for="festado">Estado: </label>
+          <select class="forjs" id="festado" name="estado" required="required">
+           <option value="">Selecione seu Estado</option>
+           
+          </select>
+        </p>
+        <div>
+          <p>Tipo: </p>
+          <label for="radiocasa"><input class="forjs" type="radio" name="Casa" id="radiocasa" value="Casa">Casa</label>
+          <label for="radioapto"><input class="forjs" type="radio" name="Apt" id="radioapto" Value="Apt">Apartamento</label>
+        </div>
+      </fieldset>
+      <fieldset class="campo">
+        <legend>Dados Último Emprego</legend>
+        <p>
+        <label for="rescur">Resumo do Currículo:</label><br>
+        <textarea class="forjs" name="resumocurriculo" id="rescur" cols="30" rows="10" maxlength="1000" required="required" class="forjs" ></textarea>
+        </p>
+        <p>
+        <label for="fcargo">Cargo: </label>
+        <input class="forjs" type="text" name="cargo" id="fcargo" required="required" maxlength="40">
+        </p>
+        <p>
+        <label for="fdesc">Descrição do Cargo: </label>
+        <input class="forjs" type="text" name="descricaocargo" id="fdesc" required="required" maxlength="500">
+        </p>
+        <p>
+        <label for="fdata">Data de Início: </label>
+        <input class="forjs" type="text" name="datainicio" id="fdata" required="required" placeholder="dd/mm/aaaa" pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$">
+        </p>
+      </fieldset>
+      <button id="btn-form" type="submit" onclick="">Botão</button>
+    </form>
+  </section>
+ <script src="script.js"></script> 
+</body>
+</html>
