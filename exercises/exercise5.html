@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Cat Walk</title>
+</head>
+
+<body>
+
+    <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+
+    <script>
+        //let img = document.getElementsByTagName("img")[0];
+        let img = document.querySelector("img");
+        img.style.left = -img.width + "px";
+        img.style.webkitTransform = "scaleX(1)"
+        console.log(img)
+        console.log(innerWidth)
+
+        //let walkForwards = true; // Variable for bonus 2
+        let speed = 10; // Variable for Bonus 2.second way
+
+        function moveCat() {
+            // Exercise 5
+            // img.style.left = parseInt(img.style.left) + 10 + "px";
+
+            // Bonus 1
+            // let pixelsWalked = parseInt(img.style.left);
+            // if (pixelsWalked > window.innerWidth - img.width) 
+            //     img.style.left = -img.width + "px";
+
+            // Bonus 2
+            // let pixelsWalked = parseInt(img.style.left);
+            // if (walkForwards && pixelsWalked >= (window.innerWidth - img.width))
+            //     walkForwards = false;
+            // if (!walkForwards && pixelsWalked <= 0 )
+            //     walkForwards = true;
+
+            // if (walkForwards) {
+            //     img.style.left = pixelsWalked + 10 + "px";
+            //     img.style.webkitTransform = "scaleX(+1)"}
+            // else {
+            //     img.style.left = pixelsWalked - 10 + "px";
+            //     img.style.webkitTransform = "scaleX(-1)"
+            // }
+
+            // Bonus 2.second way
+
+            let pixelsWalked = parseInt(img.style.left);
+            if (pixelsWalked <= -img.width) {
+                speed = 10;
+                img.style.webkitTransform = "scaleX(1)"
+            }
+            if (pixelsWalked >= 480 && pixelsWalked <= 490) {
+                clearInterval(moveTime);
+                return stopCat();
+            }
+            if (pixelsWalked >= window.innerWidth) {
+                speed = -10;
+                img.style.webkitTransform = "scaleX(-1)"
+            }
+            img.style.left = pixelsWalked + speed + "px";
+        }
+
+        let moveTime = setInterval(moveCat, 20);
+        // Bonus 3
+        function stopCat() {
+            img.src = "img/giphy.gif";
+            if (img.style.webkitTransform == "scaleX(1)") {
+                img.style.left = 500 + "px";
+                speed = 10;
+            } else {
+                img.style.left = 450 + "px";
+                speed = -10;
+            }
+            setTimeout(function () { img.src = "http://www.anniemation.com/clip_art/images/cat-walk.gif" }, 1500)
+            setTimeout(function () { moveTime = setInterval(moveCat, 20) }, 1500);
+
+        }
+
+    </script>
+</body>
+
+</html>
