@@ -12,6 +12,9 @@ background-color: darkolivegreen;
 margin-bottom: 100px;
 display: flex;
 }
+#baralho:hover {
+  cursor: pointer;
+}
 
 .row{
 display: flex;
