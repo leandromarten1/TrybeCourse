@@ -1,0 +1,14 @@
+   .centro {
+    width: 100%;
+  }
+  .topo {
+    background: yellow;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .columns {
+    width: 100%;
+  }
+
+  
