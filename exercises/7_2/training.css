@@ -1,0 +1,71 @@
+#anim1{
+  opacity: 0;
+  animation-duration: 3s;
+  animation-name: opacidade;
+  animation-iteration-count: infinite;
+}
+#anim2 {
+  animation-name: slide;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+}
+#anim2:hover{
+  animation-play-state: paused;
+}
+
+#btn {
+  background-color: #00aa00;
+  width: 200px;
+  height: 100px;
+  animation-name: muda-cor;
+  animation-duration: 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes opacidade {
+  from {
+    opacity: 0;
+    width: 100%;
+  }
+
+  to {
+    opacity: 100;
+    width: 100%;
+  }
+
+}
+@keyframes slide {
+  from {
+    margin-left: 0%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 79%;
+    width: 100%;
+    color: red
+  }
+  60% {
+    font-size: 200%;
+    margin-left: 30%;
+    width: 150%;
+  }
+
+}
+
+@keyframes muda-cor {
+  from {
+    background-color: red;
+  }
+
+  to {
+   background-color: blue;
+   color: white;
+  }
+  50%{
+    background-color: green;
+  }
+
+}
