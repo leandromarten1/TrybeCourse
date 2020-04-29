@@ -1,56 +1,88 @@
 
 html {
-margin: 0;
-padding: 0;
+  margin: 0;
+  padding: 0;
 } 
 
 body {
-background-color: darkolivegreen;
+  background-color: darkolivegreen;
 }
 
 #first-card {
-margin-bottom: 100px;
-display: flex;
+  margin-bottom: 100px;
+  display: flex;
 }
+
 #baralho:hover {
   cursor: pointer;
 }
 
 .row{
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1000px;
+  align-items: flex-start;
+  max-width: 100%;
 }
 .verso-carta {
-background-image: url('cartas/verso-da-carta.png');
-height: 573px;
-width: 412px;
+  background-image: url('cartas/verso-da-carta.png');
+  background-size: cover;
+  height: 177px;
+  width: 127px;
 }
+
+.teste {
+  background-color: moccasin;
+  margin: 5px;
+  height: 174px;
+  width: 127px;
+  background-size: cover;
+}
+
 .carta {
-background: moccasin;
-border: 1px solid black;
-height: 298px;
-width: 218px;
+  margin: 5px;
+  height: 174px;
+  width: 127px;
+  background-size: cover;
 }
+
 .cinco-ouros {
-background-image: url('cartas/cinco-de-ouros.png');
+  background-image: url('cartas/cinco-de-ouros.png');
 }
 .nove-espadas {
-background-image: url('cartas/nove-de-espadas.png');
+  background-image: url('cartas/nove-de-espadas.png');
 }
 .quatro-paus {
-background-image: url('cartas/quatro-de-paus.png');
+  background-image: url('cartas/quatro-de-paus.png');
 }
 .seis-copas {
-background-image: url('cartas/seis-de-copas.png');
+  background-image: url('cartas/seis-de-copas.png');
 }
 .sete-espadas {
-background-image: url('cartas/sete-de-espadas.png');
+  background-image: url('cartas/sete-de-espadas.png');
 }
 .sete-paus {
-background-image: url('cartas/sete-de-paus.png');
+    background-image: url('cartas/sete-de-paus.png');
 }
 .tres-ouros {
-background-image: url('cartas/tres-de-ouros.png');
+  background-image: url('cartas/tres-de-ouros.png');
+}
+
+.rotate:hover {
+  transform: rotate(360deg);
+  transition: all 1200ms;
+}
+
+.flipx:hover{
+  transform: rotateX(360deg);
+  transition: all 1200ms;
+}
+
+.flipy:hover{
+  transform: rotateY(360deg);
+  transition: all 1200ms;
+}
+.scale:hover {
+  transform: scale(1.2);
+  transition: all 1200ms;
 }
