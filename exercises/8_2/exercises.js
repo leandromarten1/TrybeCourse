@@ -89,3 +89,6 @@ const verify = (obj, key, value) => {
   }
 }
 console.log(verify(lesson1, 'materia', 'Matemática'));
+
+// Bonus 1 - Crie uma função para contar quantos estudantes assistiram as aulas de matemática. Use o objeto criado no exercício 5. #30
+
