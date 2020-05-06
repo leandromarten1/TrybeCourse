@@ -6,6 +6,9 @@ const findTheNeedle = (arr, string) => {
     if(arr[i] === string){
       return i;
     }
+    if(arr.indexOf(string) === -1){
+      return -1;
+    }
   }
 }
 
@@ -24,4 +27,4 @@ assert.strictEqual(output, expected);
 words = ['plant', 'shelf', 'arrow', 'bird'];
 expected = -1;
 output = findTheNeedle(words, 'plat');
-//assert.strictEqual(output, expected);
+assert.strictEqual(output, expected);
