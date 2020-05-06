@@ -1,6 +1,7 @@
 const assert = require('assert');
 // escreva a função addOne para passar nos testes abaixo:
 const addOne = (arr) => {
+  const copy = Object.assign({}, arr);
   let exp = [];
   for (let i=0; i<arr.length; i+=1){
     exp.push((arr[i]+1));
