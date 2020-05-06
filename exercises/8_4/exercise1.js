@@ -16,4 +16,4 @@ const output = addOne(myArray);
 
 assert.strictEqual(typeof addOne, 'function');
 assert.deepEqual(output, expected);
-//assert.deepEqual(myArray, unchanged);
+assert.deepEqual(myArray, unchanged);
