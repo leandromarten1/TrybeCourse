@@ -7,4 +7,4 @@ function change(param) {
 // implemente seus testes aqui
 // Utilize assert.ok() para testar uma condição
 
-assert.ok(true);
+assert.ok(change(true) === false);
