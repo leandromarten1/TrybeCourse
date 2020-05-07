@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // setando objetos!
+    const curriculum = {};
+    const personal = {
+      name: 'Leandro',
+      lastName: 'Marten',
+      age: 28
+    };
+    const adress = {
+      cep: '88058-442',
+      street: 'Servidão Sagaz',
+      number: 160,
+      city: 'Florianópolis'
+    };
+    const professional = {
+      job: 'Student',
+      salary: 1000.00,
+      company: 'Trybe'
+    };
+
+    // adicionando dado no adress
+    adress.state = 'SC';
+    console.log(adress);
+
+    // mudando um valor de um objeto
+    professional.salary = 0;
+    console.log(professional);
+
+    // Listar todas as propriedades(keys) do objeto.
+    const keys = Object.keys(personal);
+    console.log(keys);
+
+    //listar todos atributos(values) do objeto.
+    const atrib = Object.values(adress);
+    console.log(atrib);
+
+    // retornando um array com array contendo os alementos [key, value] em cada posição.
+    const arr = Object.entries(professional);
+    console.log(arr);
+    // mostrando de forma separada os subArrays
+    for(i in arr){
+      console.log(`Key: ${arr[i][0]}, Value: ${arr[i][1]}`);
+    }
+
+    // Copiar as propriedades de todos arrays e fazer o curriculo.
+    const makeCurriculum = Object.assign(curriculum, personal, professional, adress);  
+    console.log(makeCurriculum);
+
+    // Mostrando Curriculo na tela
+    const showCurriculum = (curriculo) => {
+      const sep = Object.keys(curriculo);
+      for(i in sep){
+        console.log(`${sep[i]} = ${curriculo[sep[i]]}`);
+      }
+    }; 
+    showCurriculum(curriculum);
+    
+    
+    
+    
+    
+
+
+
+
+
+  </script>
+</body>
+</html>
