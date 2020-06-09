@@ -1,44 +1,20 @@
-import React, { Component } from 'react';
-import Button from './Button';
-import Alert from './Alert';
+import React from 'react';
+import Dropdown from './Dropdown';
+import './App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+function App() {
+  const content = [
+    {id: 1, item: 'O Monge e o Executivo'},
+    {id: 2, item: 'CSS 3'},
+    {id: 3, item: 'React is Awesome'},
+    {id: 4, item: 'XABLAU!'},
+  ];
 
-    this.state = {
-      showModal: false,
-      isDisableButton: false,
-    }
-  }
-
-  changeTitle = (value) => {
-    this.setState({ title: value })
-  }
-
-  changeShowComponent = () => {
-    this.setState((state) => (
-      {
-        showModal: !state.showModal,
-        isDisableButton: !state.isDisableButton
-      }
-    ))
-  }
-
-  render() {
-    return (
-      <div className='main'>
-        <Button content='Clique Aqui!' isDisable={this.state.isDisableButton} showComponent={this.changeShowComponent} value='Título Show' />
-        {this.state.showModal &&
-          <Alert hideComponent={this.changeShowComponent} >
-            {
-              {title: "Algum título", content: "Algum conteúdo", timeSeconds: 3 }
-            }
-          </Alert>
-        }
-      </div>
-    )
-  }
+  return (
+    <div className="App">
+      <Dropdown content={content}>DropDown</Dropdown>
+    </div>
+  );
 }
 
 export default App;
