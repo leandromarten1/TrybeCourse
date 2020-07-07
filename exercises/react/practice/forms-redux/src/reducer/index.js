@@ -13,25 +13,19 @@ const INITIAL_STATE = {
 
 function listReducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case 'ADD_NAME':
+    case 'ADD_FORM':
       return {
         ...state,
-        name: action.value,
-      };
-    case 'ADD_EMAIL':
-      return {
-        ...state,
-        email: action.value,
-      };
-    case 'ADD_CPF':
-      return {
-        ...state,
-        cpf: action.value,
-      };
-    case 'ADD_ADRESS':
-      return {
-        ...state,
-        address: action.value,
+        name: action.name,
+        email: action.email,
+        cpf: action.cpf,
+        address: action.address,
+        city: action.city,
+        countryState: action.countryState,
+        addressType: action.addressType,
+        resume: action.resume,
+        role: action.role,
+        roleDescription: action.roleDescription,
       };
     default:
       return state;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { addName, addEmail, addCPF, addAdress } from './actions';
+import { addForm } from './actions';
 import { connect } from 'react-redux';
 
 const states = [
@@ -79,8 +79,18 @@ class Form extends Component {
   }
 
   render() {
-    const { name, email, cpf, address } = this.state;
-    const  {add, addEmail, addCPF, addAdress} = this.props;
+    const {
+      name,
+      email,
+      cpf,
+      address,
+      city,
+      countryState,
+      resume,
+      role,
+      roleDescription,
+    } = this.state;
+    const { addForm } = this.props;
     return (
       <div>
         <form>
@@ -189,26 +199,54 @@ class Form extends Component {
               />
             </div>
           </fieldset>
-          <button type="button" onClick={() => {
-            add(name)
-            addEmail(email)
-            addCPF(cpf)
-            addAdress(address)
-            }}>Enviar</button>
+          <button
+            type="button"
+            onClick={() => {
+              addForm(  name,
+                email,
+                cpf,
+                address,
+                city,
+                countryState,
+                resume,
+                role,
+                roleDescription,);
+            }}
+          >
+            Enviar
+          </button>
         </form>
-        <div className="container">
-         
-        </div>
+        <div className="container"></div>
       </div>
     );
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  add: e => dispatch(addName(e)),
-  addEmail: e => dispatch(addEmail(e)),
-  addCPF: e => dispatch(addCPF(e)),
-  addAdress: e => dispatch(addAdress(e))
-})
+const mapDispatchToProps = (dispatch) => ({
+  addForm: (
+    name,
+    email,
+    cpf,
+    address,
+    city,
+    countryState,
+    resume,
+    role,
+    roleDescription,
+  ) =>
+    dispatch(
+      addForm(
+        name,
+        email,
+        cpf,
+        address,
+        city,
+        countryState,
+        resume,
+        role,
+        roleDescription,
+      ),
+    ),
+});
 
 export default connect(null, mapDispatchToProps)(Form);
