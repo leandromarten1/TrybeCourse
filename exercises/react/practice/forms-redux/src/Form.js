@@ -202,7 +202,7 @@ class Form extends Component {
           <button
             type="button"
             onClick={() => {
-              addForm(  name,
+              addForm(name,
                 email,
                 cpf,
                 address,
