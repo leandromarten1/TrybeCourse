@@ -1,0 +1,9 @@
+.pokemon {
+  background-image: linear-gradient(to bottom right, white, lightblue);
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 40%;
+  padding: 20px;
+  flex-grow: 1;
+}
