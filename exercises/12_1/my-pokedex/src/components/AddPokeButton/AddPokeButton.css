@@ -1,0 +1,9 @@
+button.type-button {
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid rgb(2, 2, 141);
+  color: rgb(2, 2, 141);
+  background-color: yellow;
+  margin: 2%;
+}
